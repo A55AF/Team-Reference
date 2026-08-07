@@ -67,8 +67,9 @@ struct SegmentTree {
 ```
 
 ## Complexity
-Time: 
- - build: $O(N)$
- - query: $O(log_2(N))$
- - update: $O(log_2(N))$
-Memory: $4N$
+**Time:** 
+ - **build:** $O(N)$
+ - **query:** $O(log_2(N))$
+ - **update:** $O(log_2(N))$
+
+**Memory:** $4N$
