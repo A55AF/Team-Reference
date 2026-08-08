@@ -1,0 +1,15 @@
+- **Divisible by 2:** The last digit is even
+- **Divisible by 3:** The sum of the digits is divisible by 3
+- **Divisible by 4:** The last two digits form a number that is divisible by 4.
+- **Divisible by 5:** The last digit is 0 or 5
+- **Divisible by 6:** The number is divisible by 2 and 3
+- **Divisible by 7:** The alternating sum of each consecutive 3 digits from right to left is divisible by 7
+- **Divisible by 8:** The last three digits are divisible by 8
+- **Divisible by 9:** The sum of the digits is divisible by 9.
+- **Divisible by 10:** The last digit is 0
+- **Divisible by 11:** The alternating sum of the digits is divisible by 11
+- **Divisible by 12:** The number is divisible by 3 and by 4
+- **Divisible by 13:** The alternating sum of each consecutive 3 digits from right to left is divisible by 13
+- **Divisible by 14:** The number is divisible by 2 and by 7
+- **Divisible by 15:** The number is divisible by 3 and by 5
+- **Divisible by 16:** The last four digits is divisible by 16
