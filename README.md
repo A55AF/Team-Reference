@@ -6,5 +6,6 @@
 - [Sparse Table](Data%20Structures/Sparse%20Table.md)
 ## Math
 - [Divisibility Rules](Math/Divisibility%20Rules.md)
+- [Mobius](Math/Mobius.md)
 ## Number Theory
 - [Combinatorics](Number%20Theory/Combinatorics.md)
