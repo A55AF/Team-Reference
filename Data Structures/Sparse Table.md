@@ -32,6 +32,49 @@ struct SparseTable {
     }
 };
 ```
+
+## Template (Yasser)
+```cpp
+class sparse
+{
+private:
+    ll n;
+    vector<array<ll, 32>> ans;
+    ll merge(ll a, ll b)
+    {
+        return gcd(a, b);
+    }
+    void build()
+    {
+        ll len = __lg(n);
+
+        for (ll j = 1; j <= len; j++)
+        {
+            for (ll i = 0; i + (1LL << (j - 1)) < n; i++)
+            {
+                ans[i][j] = merge(ans[i][j - 1], ans[i + (1LL << (j - 1))][j - 1]);
+            }
+        }
+    }
+
+public:
+    ll query(ll l, ll r)
+    {
+        ll len = __lg(r - l + 1);
+        return merge(ans[l][len], ans[r - (1LL << len) + 1][len]);
+    }
+    sparse(vector<ll> &a)
+    {
+        n = a.size();
+        ans.resize(n);
+        for (ll i = 0; i < n; i++)
+        {
+            ans[i][0] = a[i];
+        }
+        build();
+    }
+};
+```
 ## Complexity
 **Time:** 
 - **build:** $O(\text{N} \log_2 \text{N})$
