@@ -1,5 +1,7 @@
 # Team-Reference
 
+## Bit Manipulation
+- [Bitwise Operators Formulas](Bit%20Manipulation/Bitwise%20Operators%20Formulas.md)
 ## Data Structures
 - [Ordered set & multiset](Data%20Structures/Ordered%20set%20&%20multiset.md)
 - [Segment Tree](Data%20Structures/Segment%20Tree.md)
