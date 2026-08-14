@@ -1,8 +1,7 @@
 ## Template
 ```cpp
 const ll LG =25;
-ll getBit(ll num, ll idx)
-{
+ll getBit(ll num, ll idx) {
     return (num >> idx) & 1;
 }
 struct matrix {
