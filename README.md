@@ -11,5 +11,6 @@
 ## Math
 - [Divisibility Rules](Math/Divisibility%20Rules.md)
 - [Mobius](Math/Mobius.md)
+- [GCD & LCM Tricks](Math/GCD%20&%20LCM%20Tricks.md)
 ## Number Theory
 - [Combinatorics](Number%20Theory/Combinatorics.md)
