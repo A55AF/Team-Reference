@@ -1,5 +1,10 @@
 ## Template
 ```cpp
+const ll LG =25;
+ll getBit(ll num, ll idx)
+{
+    return (num >> idx) & 1;
+}
 struct matrix {
     vector<vector<ll>> mat;
     ll n, m;
@@ -64,3 +69,5 @@ matrix matpow(matrix &base, long long n) {
     return ans;
 }
 ```
+
+**NOTE: It depends on the modular arithmetic functions, add them from [Combinatorics](Number%20Theory/Combinatorics.md)**
