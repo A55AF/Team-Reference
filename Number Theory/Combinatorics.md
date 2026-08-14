@@ -2,6 +2,8 @@
 
 ```cpp
 const int mod = 1e9 + 7;
+
+// Valid and fast in most cases (a, b <= 1e9)
 ll add(ll a, ll b) {
     return (a + b + mod) % mod;
 }
@@ -11,6 +13,19 @@ ll sub(ll a, ll b) {
 ll mul(ll a, ll b) {
     return (a * b) % mod;
 }
+
+// More Safe but slow (use it with very large numbers)
+ll add(ll a, ll b) {
+    return ((a % mod) + (b % mod)) % mod;
+}
+ll sub(ll a, ll b) {
+	return (((a % mod) - (b % mod)) % mod + mod) % mod;
+}
+ll mul(ll a, ll b) {
+    return ((a % mod) * (b % mod)) % mod;
+}
+
+
 ll fpow(ll b, ll pw)
 {
     ll ans = 1;
