@@ -3,6 +3,7 @@
 ## Data Structures
 - [Ordered set & multiset](Data%20Structures/Ordered%20set%20&%20multiset.md)
 - [Segment Tree](Data%20Structures/Segment%20Tree.md)
+- [Lazy Segment Tree](Data%20Structures/Lazy%20Segment%20Tree.md)
 - [Sparse Table](Data%20Structures/Sparse%20Table.md)
 ## Dynamic Programming
 - [Matrix Expo](Dynamic%20Programming/Matrix%20Expo.md)
