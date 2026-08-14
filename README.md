@@ -6,6 +6,7 @@
 - [Sparse Table](Data%20Structures/Sparse%20Table.md)
 ## Dynamic Programming
 - [Matrix Expo](Dynamic%20Programming/Matrix%20Expo.md)
+- [DP Tricks](Dynamic%20Programming/DP%20Tricks.md)
 ## Graph
 - [LCA](Graph/LCA.md)
 ## Math
