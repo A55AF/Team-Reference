@@ -7,6 +7,7 @@
 - [Segment Tree](Data%20Structures/Segment%20Tree.md)
 - [Lazy Segment Tree](Data%20Structures/Lazy%20Segment%20Tree.md)
 - [Sparse Table](Data%20Structures/Sparse%20Table.md)
+- [Binary Trie](Data%20Structures/Binary%20Trie.md)
 ## Dynamic Programming
 - [Matrix Expo](Dynamic%20Programming/Matrix%20Expo.md)
 - [DP Tricks](Dynamic%20Programming/DP%20Tricks.md)
@@ -24,3 +25,4 @@
 - [SPF](Number%20Theory/SPF.md)
 ## Strings
 - [Hashing](Strings/Hashing.md)
+- [Trie](Strings/Trie.md)
