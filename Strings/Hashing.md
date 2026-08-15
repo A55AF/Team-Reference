@@ -173,7 +173,7 @@ struct custom_hash {
 ```
 ## Complexity
 **Time:** 
-- **build:** $O(\text{N})$
+- **build:** $O(N)$
 - **query:** $O(1)$
 
-**Memory:** $O(\text{N})$
+**Memory:** $O(N)$

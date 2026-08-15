@@ -77,7 +77,7 @@ public:
 ```
 ## Complexity
 **Time:** 
-- **build:** $O(\text{N} \log_2 \text{N})$
+- **build:** $O(NlogN)$
 - **query:** $O(1)$
 
-**Memory:** $O(\text{N} \log_2 \text{N})$
+**Memory:** $O(NlogN)$

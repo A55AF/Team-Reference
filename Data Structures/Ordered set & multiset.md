@@ -8,6 +8,6 @@ template<class T> using ordered_multiset = tree<T, null_type, std::less_equal<T>
 ```
 ## Complexity
 
-**Time:** $O(\log_2\text{N} * \text{Big Constant})$
+**Time:** $O(logN * \text{Big Constant})$
 
-**Memory:** $O(\text{N})$
+**Memory:** $O(N)$

@@ -130,8 +130,8 @@ public:
 ```
 ## Complexity
 **Time:** 
- - **build:** $O(\text{N})$
- - **query:** $O(\log_2\text{N})$
- - **update:** $O(\log_2\text{N})$
+ - **build:** $O(N)$
+ - **query:** $O(logN)$
+ - **update:** $O(logN)$
 
-**Memory:** $O(\text{N})$
+**Memory:** $O(N)$

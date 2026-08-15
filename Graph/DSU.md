@@ -47,6 +47,6 @@ void rollback_to(int idx) {
 ```
 
 ## Complexity
-**Time:** $O(log\ N)$
+**Time:** $O(logN)$
 
 **Memory:** $O(N)$
