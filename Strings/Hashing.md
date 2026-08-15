@@ -131,6 +131,46 @@ struct hstring {
 };
 ```
 
+## Custom Hash
+```cpp
+struct custom_hash {
+    static uint64_t splitmix64(uint64_t x) {
+        x += 0x9e3779b97f4a7c15;
+        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
+        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
+        return x ^ (x >> 31);
+    }
+
+    size_t operator()(uint64_t x) const {
+        static const uint64_t FIXED_RANDOM =
+            chrono::steady_clock::now().time_since_epoch().count();
+        return splitmix64(x + FIXED_RANDOM);
+    }
+};
+```
+
+## Pair Custom Hash
+```cpp
+struct custom_hash {
+    static uint64_t splitmix64(uint64_t x) {
+        x += 0x9e3779b97f4a7c15;
+        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
+        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
+        return x ^ (x >> 31);
+    }
+
+    template <typename T1, typename T2>
+    size_t operator()(const std::pair<T1, T2> &p) const {
+        static const uint64_t FIXED_RANDOM =
+            std::chrono::steady_clock::now().time_since_epoch().count();
+
+        uint64_t h1 = splitmix64(std::hash<T1>{}(p.first) + FIXED_RANDOM);
+        uint64_t h2 = splitmix64(std::hash<T2>{}(p.second) + FIXED_RANDOM);
+
+        return h1 ^ (h2 + 0x9e3779b9 + (h1 << 6) + (h1 >> 2));
+    }
+};
+```
 ## Complexity
 **Time:** 
 - **build:** $O(\text{N})$
