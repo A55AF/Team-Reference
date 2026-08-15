@@ -3,7 +3,7 @@
 - **Self-Inverse:** $A \oplus A = 0$
 - **Commutative:** $A \oplus B = B \oplus A$
 - **Associative:** $(A \oplus B) \oplus C = A \oplus (B \oplus C)$
-- **Bitwise Inversion:** $A \oplus ALL\_ONES = \sim A$
+- **Bitwise Inversion:** $A \oplus ALL ONES = \sim A$
 - **Self-Reversibility:** If $C = A \oplus B$, then:
   - $A = C \oplus B$
   - $B = C \oplus A$
@@ -39,7 +39,7 @@ $$b = a \oplus b \quad \text{(b gets original a)}$$
 $$a = a \oplus b \quad \text{(a gets original b)}$$
 
 ### Toggle Bitwise State (Flip Specific Bits)
-- **Flip all bits:** $x \oplus ALL\_ONES$ (or $\sim x$)
+- **Flip all bits:** $x \oplus ALL\ ONES$ (or $\sim x$)
 - **Flip $k$-th bit (0-indexed):** $x \oplus (1 \ll k)$
 
 ### Rightmost Bit Manipulations
