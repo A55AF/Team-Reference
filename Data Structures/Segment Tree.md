@@ -68,95 +68,64 @@ struct SegmentTree {
 
 ## Template (Yasser)
 ```cpp
-struct Node 
-{ 
-    ll gd; 
-}; 
-Node merge(Node a, Node b) 
-{ 
-    return {gcd(a.gd, b.gd)}; 
-} 
-Node neutral = {}; 
-template <typename T> 
-class segmentTree 
-{ 
-private: 
-    ll left(ll a) 
-    { 
-        return 2 * a + 1; 
-    } 
-    ll right(ll a) 
-    { 
-        return 2 * a + 2; 
-    } 
-    ll mid(ll a, ll b) 
-    { 
-        return a + (b - a) / 2; 
-    } 
-    ll n; 
-    vector<T> arr; 
-    vector<Node> tree; 
-    void build(ll node, ll lx, ll rx) 
-    { 
-        if (lx == rx) 
-        { 
-            tree[node] = {arr[lx]}; 
-            return; 
-        } 
-        ll m = mid(lx, rx); 
-        build(left(node), lx, m); 
-        build(right(node), m + 1, rx); 
-        tree[node] = merge(tree[left(node)], tree[right(node)]); 
-    } 
-    void update(ll node, ll lx, ll rx, ll idx, T val) 
-    { 
-        if (lx == rx) 
-        { 
-            arr[idx] = val; 
-            tree[node] = {arr[lx]}; 
-            return; 
-        } 
-        ll m = mid(lx, rx); 
-        if (idx <= m) 
-        { 
-            update(left(node), lx, m, idx, val); 
-        } 
-        else 
-        { 
-            update(right(node), m + 1, rx, idx, val); 
-        } 
-        tree[node] = merge(tree[left(node)], tree[right(node)]); 
-    } 
-    Node query(ll node, ll lx, ll rx, ll l, ll r) 
-    { 
-        if (lx >= l && rx <= r) 
-        { 
-            return tree[node]; 
-        } 
-        if (lx > r || rx < l) 
-        { 
-            return neutral; 
-        } 
-        ll m = mid(lx, rx); 
-        return merge(query(left(node), lx, m, l, r), query(right(node), m + 1, rx, l, r)); 
-    } 
- 
-public: 
-    segmentTree(vector<T> &a) 
-    { 
-        arr = a; 
-        n = a.size(); 
-        tree.resize(4 * n); 
-        build(0, 0, n - 1); 
-    } 
-    void update(ll idx, T val) 
-    { 
-        update(0, 0, n - 1, idx, val); 
-    } 
-    Node query(ll l, ll r) 
-    { 
-        return query(0, 0, n - 1, l, r); 
-    } 
+struct Node {
+    ll gd;
+};
+Node merge(Node a, Node b) { return {gcd(a.gd, b.gd)}; }
+Node neutral = {};
+template <typename T> class segmentTree {
+private:
+    ll left(ll a) { return 2 * a + 1; }
+    ll right(ll a) { return 2 * a + 2; }
+    ll mid(ll a, ll b) { return a + (b - a) / 2; }
+    ll n;
+    vector<T> arr;
+    vector<Node> tree;
+    void build(ll node, ll lx, ll rx) {
+        if (lx == rx) {
+            tree[node] = {arr[lx]};
+            return;
+        }
+        ll m = mid(lx, rx);
+        build(left(node), lx, m);
+        build(right(node), m + 1, rx);
+        tree[node] = merge(tree[left(node)], tree[right(node)]);
+    }
+    void update(ll node, ll lx, ll rx, ll idx, T val) {
+        if (lx == rx) {
+            arr[idx] = val;
+            tree[node] = {arr[lx]};
+            return;
+        }
+        ll m = mid(lx, rx);
+        if (idx <= m) {
+            update(left(node), lx, m, idx, val);
+        } else {
+            update(right(node), m + 1, rx, idx, val);
+        }
+        tree[node] = merge(tree[left(node)], tree[right(node)]);
+    }
+    Node query(ll node, ll lx, ll rx, ll l, ll r) {
+        if (lx >= l && rx <= r) {
+            return tree[node];
+        }
+        if (lx > r || rx < l) {
+            return neutral;
+        }
+        ll m = mid(lx, rx);
+        return merge(query(left(node), lx, m, l, r),
+                     query(right(node), m + 1, rx, l, r));
+    }
+
+public:
+    segmentTree(vector<T> &a) {
+        arr = a;
+        n = a.size();
+        tree.resize(4 * n);
+        build(0, 0, n - 1);
+    }
+    void update(ll idx, T val) { update(0, 0, n - 1, idx, val); }
+    Node query(ll l, ll r) { return query(0, 0, n - 1, l, r); }
 };
 ```
 ## Complexity
