@@ -12,6 +12,7 @@
 - [DP Tricks](Dynamic%20Programming/DP%20Tricks.md)
 ## Graph
 - [LCA](Graph/LCA.md)
+- [DSU](Graph/DSU.md)
 ## Math
 - [Divisibility Rules](Math/Divisibility%20Rules.md)
 - [Mobius](Math/Mobius.md)
@@ -19,5 +20,7 @@
 - [Math Formulas](Math/Math%20Formulas.md)
 ## Number Theory
 - [Combinatorics](Number%20Theory/Combinatorics.md)
+- [Sieve](Number%20Theory/Sieve.md)
+- [SPF](Number%20Theory/SPF.md)
 ## Strings
 - [Hashing](Strings/Hashing.md)
