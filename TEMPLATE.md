@@ -18,3 +18,10 @@ signed main() {
     return 0;
 }
 ```
+
+## Pragmas
+```cpp
+#pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("O3")
+// #pragma GCC target("sse4")
+```
