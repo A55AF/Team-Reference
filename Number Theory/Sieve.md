@@ -1,3 +1,4 @@
+## Template
 ```cpp
 bool not_primes[N];
 void sieve() {

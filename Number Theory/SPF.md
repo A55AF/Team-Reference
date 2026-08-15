@@ -1,3 +1,4 @@
+## Template
 ```cpp
 int spf[N];
 void SPF() {
