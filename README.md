@@ -19,3 +19,5 @@
 - [Math Formulas](Math/Math%20Formulas.md)
 ## Number Theory
 - [Combinatorics](Number%20Theory/Combinatorics.md)
+## Strings
+- [Hashing](Strings/Hashing.md)
